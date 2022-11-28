@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>booklist</class>
+ <widget class="QWidget" name="booklist">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>555</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图书浏览</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/icon.ico</normaloff>:/icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>791</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="inputLine"/>
+      </item>
+      <item>
+       <widget class="QComboBox" name="mod">
+        <item>
+         <property name="text">
+          <string extracomment="name">图书名称</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string extracomment="autho">图书作者</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string extracomment="type">图书类型</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="searchButton">
+        <property name="text">
+         <string>搜索</string>
+        </property>
+        <property name="shortcut">
+         <string>Return</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="flushButton">
+        <property name="text">
+         <string>刷新</string>
+        </property>
+        <property name="shortcut">
+         <string>F5</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTableWidget" name="bookTable">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+         </font>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column>
+         <property name="text">
+          <string>书籍编号</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>书籍名称</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>书籍出版社</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>库存</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>书籍作者</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>书籍类型</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="4">
+         <widget class="QPushButton" name="phoButton">
+          <property name="text">
+           <string>查看图片</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="landButton">
+          <property name="text">
+           <string>借阅</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QPushButton" name="addButton">
+          <property name="text">
+           <string>添加图书</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="nameLab">
+          <property name="text">
+           <string>名称：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="numLine">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QPushButton" name="fixinfo">
+          <property name="text">
+           <string>修改信息</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="numLab">
+          <property name="text">
+           <string>编号：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="nameLine">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="authoLab">
+          <property name="text">
+           <string>作者：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="stockLine">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="stockLab">
+          <property name="text">
+           <string>库存：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="authoLine">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6" rowspan="2">
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>删除</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
